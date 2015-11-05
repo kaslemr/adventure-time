@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from atus_analysis.views import default_view
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', default_view, name="default_view")
 ]
 
 #silly change
