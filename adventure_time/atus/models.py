@@ -10,10 +10,8 @@ class Respondent(models.Model):
     activity_totals = models.ManyToManyField(Activity)
 
 
-
 class Activity(models.Model):
     code = models.IntegerField()
     daily_minutes = models.IntegerField()
     total_respondents = models.IntegerField()
     activity_title = models.CharField(100)
-
