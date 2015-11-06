@@ -3,7 +3,7 @@ from atus_analysis.models import PersonInfo
 
 
 def get_summary_data_from_atus_data(apps, schema_creation):
-    atus_sum_df = pd.read_csv("atus_data/astussum_2014.dat", names=[
+    atus_sum_df = pd.read_csv("atus_data/atussum_2014.dat", names=[
         'person_id', 'weight', 'youngest_child', 'age', 'sex', 'education', 'race',
                'metro_status', 'labor_status', 'weekly_earnings'])
     for row in atus_sum_df.iterrows():
