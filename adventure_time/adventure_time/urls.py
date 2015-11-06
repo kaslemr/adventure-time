@@ -21,5 +21,3 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', default_view, name="default_view")
 ]
-
-#silly change

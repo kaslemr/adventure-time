@@ -10,6 +10,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atus/models.py" afterPath="$PROJECT_DIR$/atus/models.py" />
 =======
     <list default="true" id="41cfd726-d79e-4066-a976-493f0a35a862" name="Default" comment="">
+<<<<<<< 5963d061a6801b6b8b7fe4b2311d9556ff3f79f3
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/travisknop.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ATUS-API.ipynb" afterPath="$PROJECT_DIR$/../ATUS-API.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/adventure_time.iml" afterPath="$PROJECT_DIR$/.idea/adventure_time.iml" />
@@ -18,6 +19,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
 >>>>>>> starting to add api framework
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adventure_time/urls.py" afterPath="$PROJECT_DIR$/adventure_time/urls.py" />
+>>>>>>> added djangorestframework
     </list>
     <ignored path="adventure_time.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -172,11 +176,21 @@
 =======
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/adventure_time/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.653944">
+              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventure_time/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.913486">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -192,11 +206,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/adventure_time/settings.py" />
+<<<<<<< 5963d061a6801b6b8b7fe4b2311d9556ff3f79f3
 <<<<<<< e3282fa3c5586de5e8d6be4e4aa55f9f9f4df5e1
         <option value="$PROJECT_DIR$/atus/models.py" />
         <option value="$PROJECT_DIR$/atusact_2014.dat.webloc" />
         <option value="$PROJECT_DIR$/adventure_time/import_data.py" />
         <option value="$PROJECT_DIR$/import_data.py" />
+=======
+        <option value="$PROJECT_DIR$/adventure_time/urls.py" />
+>>>>>>> added djangorestframework
       </list>
     </option>
   </component>
@@ -214,6 +232,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< 5963d061a6801b6b8b7fe4b2311d9556ff3f79f3
 <<<<<<< e3282fa3c5586de5e8d6be4e4aa55f9f9f4df5e1
 <<<<<<< ab367783f8c9e82ae3a81c16ccdcd0aeaac815d7
 <<<<<<< 30c59c11cd44ac90c7d2715f55f7351e30b76c4e
@@ -221,8 +240,11 @@
 =======
     <option name="x" value="436" />
 >>>>>>> starting to add api framework
+=======
+    <option name="x" value="544" />
+>>>>>>> added djangorestframework
     <option name="y" value="23" />
-    <option name="width" value="844" />
+    <option name="width" value="736" />
     <option name="height" value="720" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -345,7 +367,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="sshConsole" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -598,7 +620,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="436" y="23" width="844" height="720" extended-state="0" />
+    <frame x="544" y="23" width="736" height="720" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -611,7 +633,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31546134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3645533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -903,9 +925,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/adventure_time/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< 5963d061a6801b6b8b7fe4b2311d9556ff3f79f3
         <state vertical-scroll-proportion="0.913486">
           <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
 >>>>>>> starting to add api framework
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adventure_time/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.653944">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+>>>>>>> added djangorestframework
           <folding />
         </state>
       </provider>
