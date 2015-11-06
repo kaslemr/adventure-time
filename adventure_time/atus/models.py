@@ -17,20 +17,24 @@ class Respondent(models.Model):
     school_enrollment = models.IntegerField()
     school_level = models.IntegerField()
     typical_work_hrs = models.IntegerField()
-    activity_code = models.ManyToManyField(Activity)
-
-
-class Activity(models.Model):
-    respondent = models.ForeignKey(Respondent)
-    activity_code = models.IntegerField()
-
-    daily_minutes = models.IntegerField()
-    total_respondents = models.IntegerField()
-    activity_title = models.CharField(100)
+    activity_code = models.ManyToManyField(ActivityCode, through='ActivityTitle')
+    household = models.ManytoManyField(Household)
 
 
 class Household(models.Model):
-    respondent = models.ForeignKey(Respondent)
+    respondent_id = models.ForeignKey(Respondent)
+#   relative_id = models.IntegerField()
+    age = models.IntegerField()
+    relations = models.IntegerField()
+    sex = models.IntegerField()
+
+
+class ActivityTitles_(models.Model):
+    code = models.IntegerField()
+    title = models.CharField(max_length=75)
+
+
+class ActivityResponses (models.Model):
     activity_code = models.IntegerField()
     minutes = models.IntegerField()
 
