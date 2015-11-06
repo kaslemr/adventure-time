@@ -9,7 +9,7 @@ class PersonInfo(models.Model):
     weight = models.IntegerField()
     youngest_child = models.IntegerField()
     age = models.IntegerField()
-    sex = models.TextField()
+    sex = models.IntegerField()
     education = models.IntegerField()
     race = models.IntegerField()
     metro_status = models.IntegerField()
