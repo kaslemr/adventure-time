@@ -4,9 +4,8 @@ import pandas as pd
 def get_summary_data_from_atus_data(apps, schema_creation):
     atus_sum_df = pd.read_csv("atus_data/astussum_2014.dat", names=[
         'id', 'person_id', 'weight', 'youngest_child', 'age', 'sex', 'education', 'race',
-               'metro_status', 'labor_status', 'weekly_earnings',
-        ""
-    ])
+               'metro_status', 'labor_status', 'weekly_earnings'])
+    for
 
 
 """
