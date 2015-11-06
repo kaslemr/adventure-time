@@ -66,5 +66,6 @@ target/
 *.pot
 *.pyc
 __pycache__/
+.idea/
 local_settings.py
 
