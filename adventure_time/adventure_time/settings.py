@@ -39,8 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'atus_analysis'
-    'api'
+    'atus_analysis',
 )
 
 MIDDLEWARE_CLASSES = (
