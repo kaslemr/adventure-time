@@ -9,6 +9,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+adventure_time/.idea/adventure_time.iml
+adventure_time/.idea/misc.xml
 .Python
 env/
 build/
