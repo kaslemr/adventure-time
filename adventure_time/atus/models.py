@@ -34,6 +34,8 @@ class ActivityTitle(models.Model):
     code = models.CharField(max_length=10)
     title = models.CharField(max_length=75)
 
+    def __str__(self):
+        return str(self.code)
 
 class ActivityResponse(models.Model):
     respondent = models.ForeignKey(Respondent)

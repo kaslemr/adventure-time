@@ -113,8 +113,8 @@ def load_activity_title_data(apps, schema_editor):
 
 def load_activity_response_data(apps, schema_editor):
     activity_codes = pd.read_csv("atus/atussum_2014.dat")
-    activity_codes.drop(activity_codes.columns[1:24], axis=1, inplace=True)
-    activity_codes = pd.melt(activity_codes, id_vars=['respondent'],
+    activity_codes.drop(activity_codes.columns[1:18], axis=1, inplace=True)
+    activity_codes = pd.melt(activity_codes, id_vars=['tucaseid'],
                          value_vars=['t010101',
                                      't010102', 't010201', 't010299',
        't010301', 't010399', 't010401', 't010501', 't019999', 't020101',
@@ -180,9 +180,10 @@ def load_activity_response_data(apps, schema_editor):
        't181202', 't181203', 't181204', 't181205', 't181299', 't181301',
        't181302', 't181399', 't181401', 't181501', 't181599', 't181601',
        't181699', 't181801', 't181899', 't189999', 't500101', 't500103',
-       't500105', 't500106', 't500107']).sort_values(by="respondent_id")
+       't500105', 't500106', 't500107']).sort_values(by="tucaseid")
 
-    activity_codes = activity_codes.rename(columns={"variable": 'activity_code',
+    activity_codes = activity_codes.rename(columns={"tucaseid": "respondent_id",
+                                                    "variable": 'code',
                                 "value": "minutes"})
 
     ActivityResponse = apps.get_model("atus", "ActivityResponse")
@@ -191,10 +192,10 @@ def load_activity_response_data(apps, schema_editor):
 
 
     for index, row in activity_codes.iterrows():
-        respondent = row.respondent
+        respondent = row.respondent_id
         code = row.code
         minutes = row.minutes
 
         ActivityResponse.objects.create(respondent=Respondent.objects.get(respondent=respondent),
-                                       code=ActivityTitle.objects.get(id=code),
+                                       code=ActivityTitle.objects.get(code=code),
                                         minutes=minutes)
