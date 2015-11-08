@@ -186,6 +186,10 @@ def load_activity_response_data(apps, schema_editor):
                                                     "variable": 'code',
                                 "value": "minutes"})
 
+    activity_codes["code"] = activity_codes["code"].str.replace(r't', r'')
+
+    activity_codes = activity_codes[:3850]
+
     ActivityResponse = apps.get_model("atus", "ActivityResponse")
     Respondent = apps.get_model("atus", "Respondent")
     ActivityTitle = apps.get_model("atus", "ActivityTitle")
@@ -195,6 +199,7 @@ def load_activity_response_data(apps, schema_editor):
         respondent = row.respondent_id
         code = row.code
         minutes = row.minutes
+
 
         ActivityResponse.objects.create(respondent=Respondent.objects.get(respondent=respondent),
                                        code=ActivityTitle.objects.get(code=code),
