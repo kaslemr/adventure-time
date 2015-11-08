@@ -35,7 +35,7 @@ class RespondentListView(ListAPIView):
 
 
 class RespondentDetailView(RetrieveAPIView):
-    queryset = Respondent.objects.all()
+    queryset = Respondent.objects.filter()
     serializer_class = RespondentSerializer
 
 
