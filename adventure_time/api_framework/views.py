@@ -2,7 +2,7 @@ from django.core import serializers
 from django.shortcuts import render
 from django.http import HttpResponse, QueryDict
 from django.views.decorators.csrf import csrf_exempt
-from atus.models import Respondent, ActivityResponse
+from atus.models import Respondent, ActivityResponse, ActivityTitle
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.serializers import ModelSerializer
 
@@ -21,6 +21,12 @@ def api_respondent_list_view(request):
 def api_respondent_detail_view(request, model_pk):
     qs = Respondent.objects.filter(id=model_pk)
     return HttpResponse(serializers.serialize("json", qs), content_type="application/json")
+
+@csrf_exempt
+def api_activitytitle_list_view(request):
+    qs = ActivityTitle.objects.all()
+    return HttpResponse(serializers.serialize("json", qs), content_type="application/json")
+
 
 
 class RespondentSerializer(ModelSerializer):
@@ -44,6 +50,11 @@ class ActivityResponseSerializer(ModelSerializer):
     class Meta:
         model = ActivityResponse
 
+class ActivityTitleSerializer(ModelSerializer):
+
+    class Meta:
+        model = ActivityTitle
+
 
 class ActivityResponseListView(ListAPIView):
     queryset = ActivityResponse.objects.all()
@@ -53,3 +64,14 @@ class ActivityResponseListView(ListAPIView):
 class ActivityResponseDetailView(RetrieveAPIView):
     queryset = ActivityResponse.objects.all()
     serializer_class = ActivityResponseSerializer
+
+
+class ActivityTitleListView(ListAPIView):
+    queryset = ActivityTitle.objects.all()
+    serializer_class = ActivityTitleSerializer
+
+
+class ActivityTitleDetailView(RetrieveAPIView):
+    queryset = ActivityTitle.objects.all()
+    serializer_class = ActivityTitleSerializer
+
