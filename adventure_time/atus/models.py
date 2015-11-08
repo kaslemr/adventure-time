@@ -41,3 +41,6 @@ class ActivityResponse(models.Model):
     respondent = models.ForeignKey(Respondent)
     code = models.ForeignKey(ActivityTitle)
     minutes = models.IntegerField()
+
+    def __str__(self):
+        return "{}: {}".format(str(self.respondent), str(self.code))
