@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework.authtoken import views
-from api_framework.views import api_respondent_detail_view, api_respondent_list_view, hello
+from api_framework.views import api_respondent_detail_view, api_respondent_list_view, hello, RespondentListView, \
+    RespondentDetailView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'respondent/', api_respondent_list_view, name="api_respondent_list_view")
-    #url(r'respondent/\d{14}', api_respondent_detail_view, name="api_respondent_detail_view")
+    url(r'respondent/', RespondentListView.as_view(), name="api_respondent_list_view"),
+    url(r'respondent/?P<model_pk>\d+', RespondentDetailView.as_view(), name="api_respondent_detail_view")
 ]
