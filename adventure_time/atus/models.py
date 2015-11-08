@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Respondent(models.Model):
-    respondent = models.FloatField()
+    respondent = models.IntegerField()
     weight = models.FloatField()
     age = models.IntegerField()
     sex = models.IntegerField()
@@ -17,25 +17,25 @@ class Respondent(models.Model):
     school_enrollment = models.IntegerField()
     school_level = models.IntegerField()
     typical_work_hrs = models.IntegerField()
-    activity_code = models.ManyToManyField(ActivityCode, through='ActivityTitle')
-    household = models.ManytoManyField(Household)
+    #code = models.ForeignKey("ActivityTitle")
 
+    def __str__(self):
+        return str(self.respondent)
 
-class Household(models.Model):
-    respondent_id = models.ForeignKey(Respondent)
-#   relative_id = models.IntegerField()
+class HouseholdMember(models.Model):
+    respondent = models.ForeignKey(Respondent)
+    relative_id = models.IntegerField()
     age = models.IntegerField()
-    relations = models.IntegerField()
+    relation = models.IntegerField()
     sex = models.IntegerField()
 
 
-class ActivityTitles_(models.Model):
-    code = models.IntegerField()
+class ActivityTitle(models.Model):
+    code = models.CharField(max_length=10)
     title = models.CharField(max_length=75)
 
 
-class ActivityResponses (models.Model):
-    activity_code = models.IntegerField()
+class ActivityResponse(models.Model):
+    respondent = models.ForeignKey(Respondent)
+    code = models.ForeignKey(ActivityTitle)
     minutes = models.IntegerField()
-
-
