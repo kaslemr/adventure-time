@@ -14,3 +14,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RunPython(load_activity_response_data)
     ]
+
+
+
