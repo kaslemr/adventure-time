@@ -20,7 +20,7 @@ def api_respondent_list_view(request):
 @csrf_exempt
 def api_respondent_detail_view(request, model_pk):
     qs = Respondent.objects.filter(id=model_pk)
-    return HttpResponse(serializers.serialize("json", qs) content_type="application/json"))
+    return HttpResponse(serializers.serialize("json", qs), content_type="application/json")
 
 
 class RespondentSerializer(ModelSerializer):
