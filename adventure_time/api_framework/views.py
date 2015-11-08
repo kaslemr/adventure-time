@@ -28,7 +28,6 @@ def api_activitytitle_list_view(request):
     return HttpResponse(serializers.serialize("json", qs), content_type="application/json")
 
 
-
 class RespondentSerializer(ModelSerializer):
 
     class Meta:
@@ -49,6 +48,7 @@ class ActivityResponseSerializer(ModelSerializer):
 
     class Meta:
         model = ActivityResponse
+
 
 class ActivityTitleSerializer(ModelSerializer):
 
