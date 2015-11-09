@@ -16,5 +16,3 @@ urlpatterns = [
     url(r'respondent_minutes/$', ActivityResponseListView.as_view(), name="api_householdmember_list_view"),
     url(r'respondent_minutes/(?P<respondent>\d+)/$', ActivityResponsesListView.as_view(), name="api_householdmembers_list_view"),
     ]
-
-

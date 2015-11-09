@@ -1,11 +1,12 @@
 from django.core import serializers
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, QueryDict
 from django.views.decorators.csrf import csrf_exempt
 from atus.models import Respondent, ActivityResponse, ActivityTitle, HouseholdMember
+from api_framework.models import RespondentFilter
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.serializers import ModelSerializer
-
+import django_filters
 
 def hello(request):
     all_respondents = Respondent.objects.all()
@@ -119,4 +120,27 @@ class HouseholdMembersListView(ListAPIView):
     def get_queryset(self):
         respondent = self.kwargs['respondent']
         return HouseholdMember.objects.filter(respondent=respondent)
+
+
+"""class RespondentFilterView(ListAPIView):
+    serializer_class = RespondentSerializer
+
+    def get_queryset(self, *args, **kwargs):
+        queryset = Respondent.objects.all()
+        new_set = []
+        for respondent in queryset:
+            if respondent.age <= 50:
+                new_set.append(respondent)
+        queryset = new_set
+        return queryset
+
+
+        , 'education', 'race', 'metro_status', 'labor_status', 'wkly_earnings', 'multiple_job_status',
+                  'full_or_part_job_status', 'school_enrollment', 'school_level', 'typical_work_hrs']
+                  """
+
+@csrf_exempt
+def respondent_filter_list(request):
+    f = RespondentFilter(request.GET, queryset=Respondent.objects.all())
+    return render_to_response(RespondentListView, {'filter': f})
 
