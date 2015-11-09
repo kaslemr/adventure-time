@@ -77,9 +77,13 @@ class ActivityResponseListView(ListAPIView):
 
 
 
-class ActivityResponseDetailView(RetrieveAPIView):
+class ActivityResponsesListView(ListAPIView):
     queryset = ActivityResponse.objects.all()
     serializer_class = ActivityResponseSerializer
+
+    def get_queryset(self):
+        respondent = self.kwargs['respondent']
+        return ActivityResponse.objects.filter(respondent=respondent)
 
 
 
@@ -108,17 +112,11 @@ class HouseholdMemberListView(ListAPIView):
     queryset = HouseholdMember.objects.all()
 
 
-
-class HouseholdMemberDetailView(RetrieveAPIView):
+class HouseholdMembersListView(ListAPIView):
+    queryset = HouseholdMember.objects.filter()
     serializer_class = HouseholdMemberSerializer
-    queryset = HouseholdMember.objects.all()
-    lookup_field = 'respondent'
 
-    #def get_queryset(self):
-        #respondent = self.kwargs['respondent']
-        #return HouseholdMember.objects.filter(respondent=respondent)
-
-
-
-
+    def get_queryset(self):
+        respondent = self.kwargs['respondent']
+        return HouseholdMember.objects.filter(respondent=respondent)
 
