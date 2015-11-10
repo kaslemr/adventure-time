@@ -3,10 +3,10 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse, QueryDict
 from django.views.decorators.csrf import csrf_exempt
 from atus.models import Respondent, ActivityResponse, ActivityTitle, HouseholdMember
-from api_framework.models import RespondentFilter
+#from api_framework.models import RespondentFilter
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.serializers import ModelSerializer
-import django_filters
+#import django_filters
 
 def hello(request):
     all_respondents = Respondent.objects.all()
@@ -137,8 +137,8 @@ class HouseholdMembersListView(ListAPIView):
                   'full_or_part_job_status', 'school_enrollment', 'school_level', 'typical_work_hrs']
                   """
 
-@csrf_exempt
-def respondent_filter_list(request):
-    f = RespondentFilter(request.GET, queryset=Respondent.objects.all())
-    return render_to_response(RespondentListView, {'filter': f})
+#@csrf_exempt
+#def respondent_filter_list(request):
+    #f = RespondentFilter(request.GET, queryset=Respondent.objects.all())
+    #return render_to_response(RespondentListView, {'filter': f})
 
