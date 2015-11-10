@@ -77,7 +77,6 @@ class ActivityResponseListView(ListAPIView):
     serializer_class = ActivityResponseSerializer
 
 
-
 class ActivityResponsesListView(ListAPIView):
     queryset = ActivityResponse.objects.all()
     serializer_class = ActivityResponseSerializer
@@ -87,11 +86,9 @@ class ActivityResponsesListView(ListAPIView):
         return ActivityResponse.objects.filter(respondent=respondent)
 
 
-
 class ActivityTitleListView(ListAPIView):
     queryset = ActivityTitle.objects.all()
     serializer_class = ActivityTitleSerializer
-
 
 
 class ActivityTitleDetailView(RetrieveAPIView):
@@ -111,6 +108,7 @@ class HouseholdMemberSerializer(ModelSerializer):
 class HouseholdMemberListView(ListAPIView):
     serializer_class = HouseholdMemberSerializer
     queryset = HouseholdMember.objects.all()
+
 
 
 class HouseholdMembersListView(ListAPIView):
