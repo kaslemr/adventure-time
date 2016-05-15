@@ -4,11 +4,13 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-
+.idea/
 # C extensions
 *.so
 
 # Distribution / packaging
+adventure_time/.idea/adventure_time.iml
+adventure_time/.idea/misc.xml
 .Python
 env/
 build/
@@ -66,5 +68,6 @@ target/
 *.pot
 *.pyc
 __pycache__/
+.idea/
 local_settings.py
 
